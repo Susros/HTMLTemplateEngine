@@ -110,10 +110,13 @@ $loginForm->title = "Login Form";
 $loginForm->msg = "Please enter your username and password correctly to log in.";
 ```
 
-To assign loop template, use the method called loop(), which as three parameters: loop name, variable name and value of variable:
+To assign loop template, use the method called loop(), which as 2 parameters: loop name, variables with values to be assigned.
 
 ```
-$obj->loop("loop_name", "var", "value");
+$obj->loop("loop_name", array(
+	"var1" => "value1",
+	"var2" => "value2"
+));
 ```
 
 For example, as for the loop template example given above,
