@@ -7,7 +7,6 @@
  *
  *  @author Kelvin Yin <contact@kelvinyin.com>
  *  @version v1.0.0
- *  @since v1.0.0
  *  @copyright 2018 HTMLTemplateEngine
  *  @license MIT
  *
