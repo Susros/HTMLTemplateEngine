@@ -6,7 +6,7 @@
  *  those template variables with values specified.
  *
  *  @author Kelvin Yin <contact@kelvinyin.com>
- *  @version v1.0.0
+ *  @version v1.1.0
  *  @copyright 2018 HTMLTemplateEngine
  *  @license MIT
  *
@@ -169,12 +169,58 @@ class HTMLTemplateEngine {
      */
     public function __set($var, $value) {
         
-        // Check if value is array
-        if (is_array($value) === true) {
-            $value = implode(" ", $value);
+        if (strpos($this->template, "{\${$var}}") !== false) {
+
+            // Check if value is array
+            if (is_array($value) === true) {
+                $value = implode(" ", $value);
+            }
+            
+            $this->template = str_replace("{\${$var}}", $value, $this->template);
+        } else {
+            $this->printErrorMessage("Undefined variable '{$var}'");
         }
+    }
+
+    /**
+     *  To set template variables with loop
+     *
+     *  @param string $l    Loop name
+     *  @param Mix[]  $vars List of variables and values
+     */
+    public function loop($l, $vars) {
         
-        $this->template = str_replace("{\${$var}}", $value, $this->template);
+        $preg_output = array();
+
+        if (preg_match('/\{\$loop:'. $l.':(.*)\}/', $this->template, $preg_output)) {
+
+            // Get template string
+            $templateStr = $preg_output[1];
+
+            foreach($vars as $var => $value) {
+                // Check if variable is defined
+                if (strpos($templateStr, "\${$var}") !== false) {
+
+                    // Check if value is array
+                    if (is_array($value) === true) {
+                        $value = implode(" ", $value);
+                    }
+
+                    $templateStr = str_replace("\${$var}", $value, $templateStr);
+
+                } else {
+                    $this.printErrorMessage("Undefined variable '{$var}' in loop {$l}");
+                }
+            }
+
+            // Append the loop template
+            $templateStr .= $preg_output[0];
+
+            $this->template = preg_replace('/\{\$loop:'. $l.':(.*)\}/', $templateStr, $this->template);
+
+        } else {
+            $this.printErrorMessage("Undefined loop '{$l}'");
+        }
     }
     
     /**

@@ -46,6 +46,16 @@ For example:
 </div>
 ```
 
+To loop the template, the syntax is {$loop:LOOP_NAME:<tag>$var</tag>}, where LOOP_NAME is the name for the loop template.
+
+For example:
+
+```html
+<select>
+	{$loop:currency_option:<option value='$currency_code'>$currency_name</option>}
+</select>
+```
+
 Include HTMLTemplateEngine in your PHP file if you are not using autoload.
 
 ```php
@@ -98,6 +108,36 @@ For example,
 ```php
 $loginForm->title = "Login Form";
 $loginForm->msg = "Please enter your username and password correctly to log in.";
+```
+
+To assign loop template, use the method called loop(), which as three parameters: loop name, variable name and value of variable:
+
+```
+$obj->loop("loop_name", "var", "value");
+```
+
+For example, as for the loop template example given above,
+
+```php
+$template->loop("currency_option", array(
+	"currency_code" => "AUD",
+	"currency_name" => "Australian Dollar"
+));
+
+$template->loop("currency_option", array(
+	"currency_code" => "NZD",
+	"currency_name" => "New Zealand Dollar"
+));
+
+$template->loop("currency_option", array(
+	"currency_code" => "USD",
+	"currency_name" => "United State Dollar"
+));
+
+$template->loop("currency_option", array(
+	"currency_code" => "SGD",
+	"currency_name" => "Singapore Dollar"
+));
 ```
 
 Then, to display the template, it needs to be rendered.
