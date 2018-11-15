@@ -1,3 +1,7 @@
+<div align="text-center">
+	<img src="logo.png" width="250" alt="HTML Template Engine" />
+</div>
+
 # HTML Template Engine
 HTMLTemplateEngine is a template engine that loads HTML templates with template variables. The template variables in html template can be assigned a value with HTMLTemplateEngine just like assigning normal object variables.
 
