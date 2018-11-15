@@ -1,5 +1,5 @@
-<div align="text-center">
-	<img src="logo.png" width="250" alt="HTML Template Engine" />
+<div style="text-center">
+	<img src="logo.png" width="150" alt="HTML Template Engine" />
 </div>
 
 # HTML Template Engine
