@@ -23,7 +23,7 @@ class HTMLTemplateData {
 	private $html;
 
 	/**
-	 *	@var String[] Variables in the template string
+	 *	@var Mixed[] Variables in the template string with default values
 	 */
 	private $vars;
 
@@ -44,11 +44,11 @@ class HTMLTemplateData {
 	 *
 	 *	@param String   $_templateString
 	 *	@param String   $_html
-	 *	@param String[] $_vars
+	 *	@param Mixed[]  $_vars
 	 *	@param String   $_func
 	 *	@param int 		$_loopTime;
 	 */
-	public function __construct($_templateString = "", $_html = "", $_vars = "", $_func = "", $_loopTime = 0) {
+	public function __construct($_templateString = "", $_html = "", $_vars = array(), $_func = "", $_loopTime = 0) {
 		$this->templateString = $_templateString;
 		$this->html 	   	  = $_html;
 		$this->vars 		  = $_vars;
@@ -77,7 +77,7 @@ class HTMLTemplateData {
 	/**
 	 *	Set variables
 	 *
-	 *	@param String[] $_vars
+	 *	@param Mixed[] $_vars
 	 */
 	public function setVars($_vars) {
 		$this->vars = $_vars;
@@ -122,7 +122,7 @@ class HTMLTemplateData {
 	/**
 	 *	Get variables
 	 *
-	 *	@return String[] Variables
+	 *	@return Mixed[] Variables
 	 */
 	public function getVars() {
 		return $this->vars;
