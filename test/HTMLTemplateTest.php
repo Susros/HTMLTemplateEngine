@@ -1,7 +1,5 @@
 <?php
 
-include "../src/HTMLTemplateData.php";
-
 include "../src/HTMLTemplate.php";
 use HTMLTemplateEngine\HTMLTemplate;
 

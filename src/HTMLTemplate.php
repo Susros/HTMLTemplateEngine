@@ -2,6 +2,9 @@
 
 namespace HTMLTemplateEngine;
 
+
+require_once("HTMLTemplateData.php");
+
 /**
  *	HTMLTemplate
  *
