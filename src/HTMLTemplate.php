@@ -2,7 +2,7 @@
 
 namespace HTMLTemplateEngine;
 
-
+// Import dependency
 require_once("HTMLTemplateData.php");
 
 /**
