@@ -6,7 +6,8 @@ namespace HTMLTemplateEngine;
  *	ErrorHandler
  *
  *	@version 2.0.0
- *
+ *	@license MIT
+ *	@copyright 2018 HTMLTemplateEngine
  *	@author Kelvin <contact@kelvinyin.com>
  */
 
