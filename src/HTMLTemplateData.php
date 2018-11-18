@@ -33,6 +33,11 @@ class HTMLTemplateData {
 	private $func;
 
 	/**
+	 *	@var int Number time to loop
+	 */
+	private $loopTime;
+
+	/**
 	 *	Constructor
 	 *
 	 *	This constructor initiate all member variables
@@ -41,12 +46,14 @@ class HTMLTemplateData {
 	 *	@param String   $_html
 	 *	@param String[] $_vars
 	 *	@param String   $_func
+	 *	@param int 		$_loopTime;
 	 */
-	public function __construct($_templateString = "", $_html = "", $_vars = "", $_func = "") {
+	public function __construct($_templateString = "", $_html = "", $_vars = "", $_func = "", $_loopTime = 0) {
 		$this->templateString = $_templateString;
 		$this->html 	   	  = $_html;
 		$this->vars 		  = $_vars;
 		$this->func 		  = $_func;
+		$this->loopTime 	  = $_loopTime;
 	}
 
 	/**
@@ -86,6 +93,15 @@ class HTMLTemplateData {
 	}
 
 	/**
+	 *	Set number of time to loop
+	 *
+	 *	@param int $_loopTime
+	 */
+	public function setLoopTime($_loopTime) {
+		$this->loopTime = $_loopTime;
+	}
+
+	/**
 	 *	Get template string
 	 *
 	 *	@return String Template string
@@ -119,6 +135,15 @@ class HTMLTemplateData {
 	 */
 	public function getFunction() {
 		return $this->func;
+	}
+
+	/**
+	 *	Get number of time to loop
+	 *
+	 *	@return int Number of time to loop
+	 */
+	public function getLoopTime() {
+		return $this->loopTime;
 	}
 }
 
