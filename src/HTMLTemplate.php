@@ -308,7 +308,7 @@ class HTMLTemplate {
 	 *	@return String Pattern string for template function name: dup
 	 */
 	private function funcDupPattern() {
-		return '/\{#dup:(.+);\}/';
+		return '/\{#dup\s*:\s*(.+);\}/';
 	}
 
 	/**
@@ -317,7 +317,7 @@ class HTMLTemplate {
 	 *	@return String Pattern string for template function name: loop
 	 */
 	private function funcLoopPattern() {
-		return '/\{#loop\(([0-9]+)\):(.+);\}/';
+		return '/\{#loop\(([0-9]+)\)\s*:\s*(.+);\}/';
 	}
 
 }
