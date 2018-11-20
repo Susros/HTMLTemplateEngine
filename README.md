@@ -73,7 +73,7 @@ For example:
 
 | Syntax  | Description |
 | :-----  | :--------- |
-| {#loop(n) : [Template contents]}  | Make n copies of template contents |
+| {#loop(n) : [Template contents] ;}  | Make n copies of template contents |
 
 For example:
 
