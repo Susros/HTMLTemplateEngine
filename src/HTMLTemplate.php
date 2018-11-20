@@ -296,10 +296,10 @@ class HTMLTemplate {
 	 */
 	private function varPattern($var = "") {
 		if ($var == "") {
-			return '/\{\$([a-zA-Z_]+[a-zA-Z0-9_]*)(:\"([^\"\}]+)\")?\}/';
+			return '/\{\$([a-zA-Z_]+[a-zA-Z0-9_]*)(\s*:\s*\"([^\"\}]+)\")?\}/';
 		}
 
-		return '/\{\$('. $var .')(:\"([^\"\}]+)\")?\}/';
+		return '/\{\$('. $var .')(\s*:\s*\"([^\"\}]+)\")?\}/';
 	}
 
 	/**

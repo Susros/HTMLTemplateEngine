@@ -1,5 +1,5 @@
 <div>
-{#loop(3):<p>{$msg:"Hello World"}</p>;} Testing {$done:"DONE"}
+{#loop(3):<p>{$msg : "Hello World"}</p>;} Testing {$done:"DONE"}
 </div>
 
 <p>{$description}</p>
