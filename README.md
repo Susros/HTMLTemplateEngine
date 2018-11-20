@@ -16,6 +16,18 @@ HTMLTemplateEngine can be manually downloaded or cloned by using:
 git clone git@github.com:Susros/HTMLTemplateEngine.git
 ```
 
+HTMLTemplateEngine is also available on [Packagist](https://packagist.org/packages/susros/html-template-engine). To install with composer, add this line to yoru ```composer.json```:
+
+```
+"susros/html-template-engine" : "^2.0.0"
+```
+
+or just run:
+
+```
+composer require susros/html-template-engine
+```
+
 # Templates
 
 The extension of template files is either tpl or html. Template files are all organised in different folders called packages. In each package, there can be just template files or folders to organise or categorise template files. 
