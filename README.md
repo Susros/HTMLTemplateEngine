@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="logo.png" width="350" alt="HTML Template Engine" />
+	<img src="logo.png" width="450" alt="HTML Template Engine" />
 </p>
 
 HTMLTemplateEngine is an easy, simple and lightweight templating engine library for PHP.
