@@ -53,7 +53,7 @@ Template functions are used to tell what actions does template engine need to do
 
 #### dup
 
-Dup template function is used to tell template engine to duplicate the template after the values are assigned to variables of the template.
+'**dup**' template function is used to tell template engine to duplicate the template after the values are assigned to variables of the template.
 
 | Syntax  | Description |
 | :-----  | :--------- |
@@ -69,7 +69,7 @@ For example:
 
 #### loop
 
-Template function, loop, is used to tell template engine to make an 'n' copies of templates.
+'**loop**' template function is used to tell template engine to make an 'n' copies of templates.
 
 | Syntax  | Description |
 | :-----  | :--------- |
